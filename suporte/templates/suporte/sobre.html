@@ -1,0 +1,85 @@
+{% extends 'baseHome.html' %}
+{% load static %}
+
+{% block titulo %}Sobre | {% endblock %}
+
+{% block conteudo %}
+
+<script src="{% static 'js/tilt.jquery.min.js'%}"></script>
+
+<style>
+    .conteudo p {
+        text-align: justify;
+        user-select: none;
+    }
+</style>
+
+<div class="mb-3">
+    <a href="{% url 'produto:home' %}" style="color: #262727;">
+        Página inicial</a><span style="color: #939393;">
+        <i class="fa-solid fa-2xs fa-angles-right"></i> Sobre
+    </span>
+</div>
+<div class="card shadow border ml-4 mr-4">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 mx-auto d-flex flex-column justify-content-center align-items-center"
+            style="background-color: #008b8b;">
+            <img src="https://i.postimg.cc/3wrsMPJt/logo-sobre.png" alt="IMG" class="img-fluid imagemLogo mt-5"
+                data-tilt>
+            <div class="text-center logo-conteudo mb-5">
+                <h3 class="text-center mt-4 mb-3">
+                    <strong>CLOTHES STORE</strong>
+                </h3>
+                <a href="#" class="text-reset instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>&nbsp;&nbsp;&nbsp;
+                <a href="#" class="text-reset twitter" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-twitter fa-lg"></i>
+                </a>&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'suporte:contato' %}" class="text-reset envelope">
+                    <i class="fa fa-envelope fa-lg"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-9 mx-auto">
+            <div class="conteudo">
+
+                <h3 class="text-center mb-3" style="text-transform: uppercase;">QUEM SOMOS</h3>
+                <p class="lead">
+                    A Clothes store surgiu de um sonho de criar um modelo de negócio,
+                    proporcionando qualidade, preço justo e produtos exclusivos. Somos uma empresa
+                    voltada para o comércio de vendas de vestuários, pensando sempre em satisfazer nossos
+                    clientes, comercializamos somente grandes marcas buscando acompanhar sempre as
+                    tendências de moda, afim de se tornar referência no nosso modelo de negócio e atender
+                    as necessidades e interesses dos nossos clientes.
+                </p>
+
+                <h5 class="mt-4 mb-3">NOSSA MISSÃO</h5>
+                <p class="lead">
+                    Satisfazer aos anseios de nossos clientes com muito respeito e transparência nas
+                    escolhas e decisões.
+                </p>
+
+                <h5 class="mt-4 mb-3">NOSSA VISÃO</h5>
+                <p class="lead">
+                    Ocupar um lugar de destaque no mercado e-commerce e ser reconhecido por
+                    comercializar produtos de alto padrão.
+                </p>
+
+                <h5 class="mt-4 mb-3">NOSSOS VALORES</h5>
+                <p class="lead">
+                    Ética, comprometimento, respeito a vida e ao meio ambiente.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- EFEITO IMAGEM -->
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+
+    {% endblock %}
